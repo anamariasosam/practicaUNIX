@@ -28,4 +28,5 @@ mv prac prac1 # cambio el nombre o lo muevo
 rm # borra el archivo
 rm * -r # borra TOOODOOO
 cat prac1 # Imprime el archivo
-head -n archivo # Muesta las primeras n lineas del archivo prac1
+head -n archivo # Muesta las primeras n lineas del archivo 
+tail -n archivo # Muestra las ultimas n lineas del archivo 
