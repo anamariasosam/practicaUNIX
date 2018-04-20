@@ -1,6 +1,6 @@
 echo "Ana Maria Sosa"
 echo "Crear carpeta"
-mdkir UDEM
+mkdir UDEM
 sleep 5
 clear
 echo "Ruta en donde estoy"
