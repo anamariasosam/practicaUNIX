@@ -58,11 +58,13 @@ clear
 # Verificar que el archivo prac1 haya quedado en esa ruta
 echo 'Verificando copia del archivo dentro de UDEM'
 cd UDEM
+pwd
 ls
 sleep 5
 clear
 
 # Borrar el directorio UDEM y sus archivos
+echo 'Borrar el directorio UDEM y sus archivos'
 cd ..
 rm -r UDEM
 sleep 5
