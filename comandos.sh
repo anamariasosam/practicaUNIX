@@ -124,3 +124,8 @@ chmod +x a*
 
 a* : ana anita anitaa a1 a2 a3
 a? : y a continuacion tiene solo un solo caracter : a1 a2 a3
+a?? : ana a68
+a[1-5] : a1 a2a 68 ana
+
+*** Mostrrar los procesos activo ***
+ps -
