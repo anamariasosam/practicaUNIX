@@ -91,3 +91,36 @@ write ingsis05
 # 3 Ejecucion
 
 # Propetiario, Grupo del propietario, Otros usuarios, ALL  
+-rw-rw-r-- 
+
+# Modificar los permisos del archivos
+chmod D1 D2 D3 nombreArchivo
+D1: Dueño
+D2: Grupo del propietario
+D3: Otros Usuarios
+
+chmod 710 usuarios
+
+
+# Sin conocer los permisos actuales del archivo usuarios, adicione permiso de ejecucion a todo el mundo
+u: usuario dueño
+g: grupo del dueño
+o: other no hacen parte del grupo del dueño
+a: todos los archivos
+
+        u     =   r
+chmod [ g ] [ + ][w] archivo
+        o     -   x
+        a  
+        
+El primero y el último se puede combinar         
+
+chmod a+x usuarios
+# Quitar permiso de lectura y escritura a los usuarios que no son del grupo del dueño y a todos los que no son del grupo
+chmod go-rw usuarios
+
+# Permisos de ejecucion a un archivo que empieza por a 
+chmod +x a*
+
+a* : ana anita anitaa a1 a2 a3
+a? : y a continuacion tiene solo un solo caracter : a1 a2 a3
