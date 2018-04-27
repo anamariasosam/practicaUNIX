@@ -129,3 +129,6 @@ a[1-5] : a1 a2a 68 ana
 
 *** Mostrrar los procesos activo ***
 ps -
+
+# Matar un proceso pero solo los mios
+kill -9 proceso
