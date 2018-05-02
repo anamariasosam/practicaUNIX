@@ -132,3 +132,11 @@ ps -
 
 # Matar un proceso pero solo los mios
 kill -9 proceso
+
+
+| Tables    | Que hace           |
+| --------- |:-------------:|
+| HOME      | ruta default |
+| PATH      | ruta |
+| LOGNAME   |       |
+| PS1="#" | Cuidadoo cambia el prompt      | 
