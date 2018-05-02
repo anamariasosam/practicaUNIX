@@ -195,3 +195,24 @@ fi
 | -w | Archivo con permisos de escritura |
 | -x | Archivo con permisos de ejecución | 
 
+## Estructuras Repetitivas
+```sh
+while condition
+do
+        
+done
+```
+
+```sh
+until condition
+do
+
+done
+```
+
+```sh
+for $vble in <listaArchivos>
+do
+
+end
+```
