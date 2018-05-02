@@ -214,5 +214,29 @@ done
 for $vble in <listaArchivos>
 do
 
-end
+done
+```
+
+### Ejemplo: Menú
+```sh
+clear
+while true
+do
+    echo " MENU PRINCIPAL "
+    echo "1. COMANDOS GENERALES"
+    echo "2. USUARIOS"
+    echo "3. SISTEMA DE ARCHIVOS"
+    echo "4. TERMINAR"
+    echo "Seleccione un opción"
+    read opcion
+    
+    case $opcion
+            1) echo "Seleccionó opcion 1";;
+            2) echo "Seleccionó opcion 2";;
+            3) echo "Seleccionó opcion 3";;
+            4) echo "Seleccionó opcion 4";;
+            5) exit
+            *) echo "Error el valor debe estar entre 1 - 4";;
+    esac
+done
 ```
