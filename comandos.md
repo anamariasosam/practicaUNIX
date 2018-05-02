@@ -144,3 +144,9 @@ a[1-5] : a1 a2a 68 ana
 | sort - [option] | Ordene clasifica un archivo, opciones: n: Numericamente , r: Inverso, b: Ignore blancos | 
 | grep ingsis01 archivo1 | Muestra las lineas de archivo1 donde se encuentra ingsis01 |
 | grep -v ingsis01 archivo1 | Muestra las lineas de archivo1 que no contienen ingsis01 |
+
+## Leer por pantalla
+´´´
+echo "Ingrese Nombre y presione Enter"
+read vble
+´´´
