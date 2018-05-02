@@ -119,29 +119,28 @@ chmod a+x usuarios
 # Quitar permiso de lectura y escritura a los usuarios que no son del grupo del dueño y a todos los que no son del grupo
 chmod go-rw usuarios
 
-# Permisos de ejecucion a un archivo que empieza por a 
-chmod +x a*
+
 
 a* : ana anita anitaa a1 a2 a3
 a? : y a continuacion tiene solo un solo caracter : a1 a2 a3
 a?? : ana a68
 a[1-5] : a1 a2a 68 ana
 
-*** Mostrrar los procesos activo ***
-ps -
-
-# Matar un proceso pero solo los mios
-kill -9 proceso
 
 
 | Comando    | Que hace           |
-| --------- |:-------------:|
+| :---------: |:-------------:|
+| chmod +x a* | Permisos de ejecucion a un archivo que empieza por a |
+| ps - | Mostrar los procesos activo |
+| kill -9 proceso | Matar un proceso pero solo los mios|
 | HOME      | ruta default |
 | PATH      | ruta |
 | LOGNAME   |       |
 | PS1="#" | Cuidadoo cambia el prompt      | 
 | diff prac1 prac2 | Muestra la diferencia entre dos archivos      | 
-| comm prac1 prac2 | Muestra las lineas en común entre dos archivos      | 
+| comm prac1 prac2 | Muestra las lineas en común entre dos archivos  | 
 | who > archivo1 | Guarda los usuarios conectados en el archivo 1 |
 | cut -c1-10 archivo1 > archivo1 | Corta campos |
 | sort - [option] | Ordene clasifica un archivo, opciones: n: Numericamente , r: Inverso, b: Ignore blancos | 
+| grep ingsis01 archivo1 | Muestra las lineas de archivo1 donde se encuentra ingsis01 |
+| grep -v ingsis01 archivo1 | Muestra las lineas de archivo1 que no contienen ingsis01 |
