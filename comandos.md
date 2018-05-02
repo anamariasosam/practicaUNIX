@@ -151,3 +151,21 @@ echo "Ingrese Nombre y presione Enter"
 read vble
 echo $vble
 ```
+
+## Condicionales
+
+```sh
+if condition
+then
+else
+fi
+```
+| Condicionales | Que hace | 
+| --------- |-------------|
+| -eq |  = |
+| -gl | >= |
+| -gt | > |
+| -le | <= |
+| -lt | < |
+|-ne | <> |
+
