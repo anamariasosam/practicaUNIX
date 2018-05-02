@@ -128,14 +128,14 @@ a[1-5] : a1 a2a 68 ana
 
 
 
-| Comando    | Que hace           |
+| Comando | Que hace | 
 | --------- |-------------|
 | chmod +x a* | Permisos de ejecucion a un archivo que empieza por a |
 | ps - | Mostrar los procesos activo |
 | kill -9 proceso | Matar un proceso pero solo los mios|
-| HOME      | ruta default |
-| PATH      | ruta |
-| LOGNAME   |       |
+| HOME | ruta default |
+| PATH | ruta |
+| LOGNAME |       |
 | PS1="#" | Cuidadoo cambia el prompt      | 
 | diff prac1 prac2 | Muestra la diferencia entre dos archivos      | 
 | comm prac1 prac2 | Muestra las lineas en común entre dos archivos  | 
