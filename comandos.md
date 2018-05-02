@@ -129,7 +129,7 @@ a[1-5] : a1 a2a 68 ana
 
 
 | Comando    | Que hace           |
-| :---------: |:-------------:|
+| --------- |-------------|
 | chmod +x a* | Permisos de ejecucion a un archivo que empieza por a |
 | ps - | Mostrar los procesos activo |
 | kill -9 proceso | Matar un proceso pero solo los mios|
