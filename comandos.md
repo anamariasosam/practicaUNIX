@@ -160,7 +160,7 @@ then
 else
 fi
 ```
-| Condicionales | Que hace | 
+| Operadores | Que hace | 
 | --------- |-------------|
 | -eq |  = |
 | -gl | >= |
@@ -168,4 +168,6 @@ fi
 | -le | <= |
 | -lt | < |
 |-ne | <> |
+| -a | and |
+| -o | or |
 
