@@ -146,7 +146,8 @@ a[1-5] : a1 a2a 68 ana
 | grep -v ingsis01 archivo1 | Muestra las lineas de archivo1 que no contienen ingsis01 |
 
 ## Leer por pantalla
-´´´
+```sh
 echo "Ingrese Nombre y presione Enter"
 read vble
-´´´
+echo $vble
+```
