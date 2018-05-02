@@ -134,9 +134,10 @@ ps -
 kill -9 proceso
 
 
-| Tables    | Que hace           |
+| Comando    | Que hace           |
 | --------- |:-------------:|
 | HOME      | ruta default |
 | PATH      | ruta |
 | LOGNAME   |       |
 | PS1="#" | Cuidadoo cambia el prompt      | 
+| diff prac1 prac2 | Muestra la diferencia entre dos archivos      | 
