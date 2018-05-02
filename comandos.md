@@ -160,6 +160,19 @@ then
 else
 fi
 ```
+
+```sh
+echo "Ingreso notal del estudiante"
+read nota
+
+if test $nota -ge 4 -a $nota -le 5
+then
+  echo "$nota esta entre 4 y 5"
+else
+  echo "$nota no esta entre 4 y 5"
+fi
+```
+
 | Operadores | Que hace | 
 | --------- |-------------|
 | -eq |  = |
@@ -170,4 +183,15 @@ fi
 |-ne | <> |
 | -a | and |
 | -o | or |
+
+## Estructura condicional para archivos
+
+| Comando | Definicion | 
+| --------- |-------------|
+| -d | directorio |
+| -f | archivo |
+| -r | Archivo con permiso de lectura |
+| -s | Archivo con longitud > 0 |
+| -w | Archivo con permisos de escritura |
+| -x | Archivo con permisos de ejecución | 
 
