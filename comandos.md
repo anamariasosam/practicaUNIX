@@ -229,14 +229,14 @@ do
     echo "4. TERMINAR"
     echo "Seleccione un opción"
     read opcion
-    
-    case $opcion
-            1) echo "Seleccionó opcion 1";;
-            2) echo "Seleccionó opcion 2";;
-            3) echo "Seleccionó opcion 3";;
-            4) echo "Seleccionó opcion 4";;
-            5) exit
-            *) echo "Error el valor debe estar entre 1 - 4";;
+    case $opcion in
+        1) echo "Selecciono opcion 1";;
+        2) echo "Selecciono opcion 2";;
+        3) echo "Selecciono opcion 3";;
+        4) echo "Selecciono opcion 4";;
+        5) exit;;
+        *) echo "Error el valor debe estar entre 1 - 4";;
     esac
 done
+
 ```
