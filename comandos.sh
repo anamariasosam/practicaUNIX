@@ -16,7 +16,7 @@ pico proci
 clear
 sleep 4 (n segundos)
 ls -l 
-$HOME # Mi ruta
+$HOME # La ruta default
 
 sh prac1 # Ejecuta el programa prac 1
 
