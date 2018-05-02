@@ -141,3 +141,7 @@ kill -9 proceso
 | LOGNAME   |       |
 | PS1="#" | Cuidadoo cambia el prompt      | 
 | diff prac1 prac2 | Muestra la diferencia entre dos archivos      | 
+| comm prac1 prac2 | Muestra las lineas en común entre dos archivos      | 
+| who > archivo1 | Guarda los usuarios conectados en el archivo 1 |
+| cut -c1-10 archivo1 > archivo1 | Corta campos |
+| sort - [option] | Ordene clasifica un archivo, opciones: n: Numericamente , r: Inverso, b: Ignore blancos | 
