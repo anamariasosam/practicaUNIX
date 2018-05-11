@@ -1,4 +1,4 @@
-# UNIX 
+# UNIX
 
 | Comando | Que hace |
 | --------- |-------------|
@@ -47,10 +47,13 @@ La salida estandar de UNIX es la pantalla, se puede modificar de la siguiente ma
 
 | Tipo | Que hace | Comando |
 | --------- |-------------|-------------|
-| SIGNO MAYOR | La salida se va para un archivo, si el archivo ya existe, lo sobreescribe |
-who > NombreArchivo |
+| SIGNO MAYOR | La salida se va para un archivo, si el archivo ya existe, lo sobreescribe | who > NombreArchivo |
 | MAYOR MAYOR | Adicion la salida al final del archivo  | who >> usuarios |
-| PIPELINE | | La salida del comando de la izquierda del | se convierte en la entrada del comando de la derechawho| who | wc -l |
+| PIPELINE  | La salida del comando de la izquierda del | se convierte en la entrada del comando de la derecha |
+ ```
+  who | wc -l
+  ```
+|
 
 # REDIRECCIONAMIENTO DE LA ENTRADA DE UNIX
 
