@@ -1,3 +1,5 @@
+source p_permisos_archivo
+
 function copiar_archivo {
   clear
   echo "Ingrese el nombre del archivo a copiar. Luego Presione Enter"
@@ -39,7 +41,7 @@ function renombrar_archivo {
     ls
   else
     clear
-    echo "$nombre_archivo_1 no existe"
+    echo "${RED}$nombre_archivo_1 no existe"
     sleep 2
     renombrar_archivo
   fi
@@ -73,6 +75,8 @@ function borrar_archivo {
   echo "${YELLOW} Ingrese el nombre del archivo a borrar. Luego Presione Enter ${CYAN}"
   read nombre_archivo
 
+  cancelar_operacion $nombre_archivo
+
   if test -f $nombre_archivo -a -w $nombre_archivo
   then
     clear
@@ -92,15 +96,13 @@ function borrar_archivo {
 
 function modificar_permisos_archivo {
   clear
+  ls
   echo "${YELLOW}Ingrese el nombre del archivo que desea modificar los permisos. Luego Presione Enter ${CYAN}"
   read nombre_archivo
 
   if test -f $nombre_archivo
   then
-    clear
-    echo "${YELLOW}¿Que permisos $nombre_archivo?. Luego Presione Enter${CYAN}"
-    read permisos
-    echo $permisos
+    seleccion_de_permisos $nombre_archivo
   else
     clear
     echo "${RED}$nombre_archivo no existe${CYAN}"

@@ -1,8 +1,17 @@
 function mensaje_error {
   clear
-  echo "Error el valor debe estar entre 1 - $1"
+  echo "${RED}Error el valor debe estar entre 1 - $1"
   sleep 2
   clear
+}
+
+function cancelar_operacion {
+  if [ $1 == "salir" ]; then
+    echo "Operacion Cancelada...."
+    sleep 2
+    clear
+    break
+  fi
 }
 
 function mensaje_despedida {
@@ -24,7 +33,7 @@ function menu_principal {
     echo "2. USUARIOS"
     echo "3. SISTEMA DE ARCHIVOS"
     echo "4. TERMINAR"
-    echo "${YELLOW}Seleccione la opción deseada. Luego Presione Enter"
+    echo "${YELLOW}Seleccione la opción deseada. Luego Presione Enter ${CYAN}"
     read opcion
     case $opcion in
       1) menu_comandos_generales;;

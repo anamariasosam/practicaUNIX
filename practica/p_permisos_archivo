@@ -1,0 +1,53 @@
+function seleccion_de_permisos {
+  clear
+  echo "\033[05;44;33m PERMISOS PARA EL ARCHIVO $1 \033[0m"
+  echo "Primero se modificaran los permisos para el usuario, luego para el grupo, por ultimo otros usuarios"
+
+  sleep 5
+  clear
+
+  permisos $1 usuario 1
+  permisos $1 grupo 2
+  permisos $1 otros 3
+}
+
+function permisos {
+  clear
+  initial="$(echo $2 | head -c 1)"
+  while true
+  do
+    echo "${WHITE}$3) Permisos para el ${BG_START} $2 ${BG_END}"
+    echo "${YELLOW}¿Que permisos desea darle? ${CYAN}"
+    echo "1) Solo Lectura"
+    echo "2) Solo Ejecucion"
+    echo "3) Solo Escritura"
+    echo "4) Lectura, Escritura"
+    echo "5) Lectura, Ejecucion"
+    echo "6) Escritura, Ejecucion"
+    echo "7) Lectura, Escritura, Ejecucion"
+    echo "${YELLOW}Seleccione la opción deseada. Luego Presione Enter ${CYAN}"
+    read opcion
+    case $opcion in
+      1) editar_permisos $initial 'r' 'wx' $1;;
+      2) editar_permisos $initial 'x' 'rw' $1;;
+      3) editar_permisos $initial 'w' 'rx' $1;;
+      4) editar_permisos $initial 'rw' 'x' $1;;
+      5) editar_permisos $initial 'rx' 'w' $1;;
+      6) editar_permisos $initial 'wx' 'r' $1;;
+      7) editar_permisos $initial 'rxw' '' $1;;
+      *) mensaje_error 7;;
+    esac
+  done
+}
+
+function editar_permisos {
+  clear
+  chmod $1+$2-$3 $4
+
+  echo "${WHITE} Permisos del archivo: $4 modificados con exito ${GREEN}"
+  ls -l | grep -w $4
+
+  sleep 4
+  clear
+  break
+}

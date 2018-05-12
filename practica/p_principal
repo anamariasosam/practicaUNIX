@@ -4,7 +4,6 @@ source p_menu_comandos_generales
 source p_menu_usuarios
 source p_menu_sistema_archivos
 
-
 chmod a-w+rx p_*
 
 menu_principal
