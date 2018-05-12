@@ -1,0 +1,28 @@
+source comandos_generales
+
+function menu_comandos_generales {
+  clear
+  while true
+  do
+    echo "Menú Comandos Generales"
+    echo "1. VISUALIZAR HORA DEL SISTEMA"
+    echo "2. PATH O RUTA ACTUAL"
+    echo "3. CAMBIO DE PASSWORD"
+    echo "4. MOSTRAR DISCO LIBRE"
+    echo "5. MOSTRAR DISCO UTILIZADO"
+    echo "6. VISUALIZAR PROCESOS ACTIVOS"
+    echo "7. REGRESAR"
+    echo "Seleccione la opción deseada:"
+    read opcion
+    case $opcion in
+      1) ejecutar_comando date;;
+      2) ejecutar_comando pwd;;
+      3) ejecutar_comando passwd;;
+      4) ejecutar_comando df;;
+      5) ejecutar_comando du;;
+      6) ejecutar_comando ps;;
+      7) menu_principal;;
+      *) mensaje_error 7;;
+    esac
+  done
+}

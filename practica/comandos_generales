@@ -1,0 +1,6 @@
+function ejecutar_comando {
+  clear
+  $1
+  sleep 2
+  clear
+}

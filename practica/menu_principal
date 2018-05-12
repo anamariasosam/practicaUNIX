@@ -1,0 +1,36 @@
+function mensaje_error {
+  clear
+  echo "Error el valor debe estar entre 1 - $1"
+  sleep 2
+  clear
+}
+
+function mensaje_despedida {
+  clear
+  nombre="$(whoami)"
+  echo "Gracias por su visita $nombre !!!"
+  sleep 2
+  exit
+  clear
+}
+
+function menu_principal {
+  clear
+  while true
+  do
+    echo " MENU PRINCIPAL "
+    echo "1. COMANDOS GENERALES"
+    echo "2. USUARIOS"
+    echo "3. SISTEMA DE ARCHIVOS"
+    echo "4. TERMINAR"
+    echo "Seleccione la opción deseada. Luego Presione Enter"
+    read opcion
+    case $opcion in
+      1) menu_comandos_generales;;
+      2) menu_usuarios;;
+      3) menu_sistema_de_archivos;;
+      4) mensaje_despedida;;
+      *) mensaje_error 4;;
+    esac
+  done
+}

@@ -1,0 +1,67 @@
+function nombre_usuarios_conectados {
+  clear
+  echo "Los usuarios conectados son:"
+  who > usuarios_conectados
+  cut -c 1-9  usuarios_conectados
+  rm usuarios_conectados
+}
+
+function usuarios_conectados {
+  nombre_usuarios_conectados
+  sleep 4
+  clear
+}
+
+function numero_de_usuarios_conectados {
+  clear
+  echo "Mostrando número de usuarios conectados:"
+  who | wc -l > usuarios_conectados
+  tr -d " \t" < usuarios_conectados > numero_usuarios_conectados
+  cat numero_usuarios_conectados
+  rm usuarios_conectados
+  rm numero_usuarios_conectados
+  sleep 4
+  clear
+}
+
+function enviar_mensaje_a_usuario {
+  nombre_usuarios_conectados
+  echo "¿A qué usuario desea enviarle el mensaje?"
+  read usuario
+
+  echo "¿Que mensaje desea enviarle a $usuario ?"
+  read mensaje
+
+  echo "Enviando: '$mensaje' al usuario: $usuario"
+  echo $mensaje | write $usuario
+
+  sleep 4
+  clear
+}
+
+function usuario_conectado {
+  echo "Veriricando si $usuario esta conectado..."
+  who | grep -w "$1" > filtro_usuario
+
+  if test -s filtro_usuario
+  then
+    echo "$usuario si esta conectado"
+  else
+    echo "$usuario no esta conectado"
+  fi
+
+  rm usuarios_conectados
+  rm filtro_usuario
+}
+
+function verificar_usuario_conectado {
+  clear
+  echo "¿Qué usuario desea verificar si esta conectado?"
+  read usuario
+  clear
+
+  usuario_conectado $usuario
+
+  sleep 4
+  clear
+}

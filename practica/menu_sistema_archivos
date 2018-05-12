@@ -1,0 +1,31 @@
+source sistema_de_archivos
+source sistema_de_directorios
+
+function menu_sistema_de_archivos {
+  clear
+  while true
+  do
+    echo "Menú Sistema de archivos"
+    echo "1. CREAR DIRECTORIO"
+    echo "2. COPIAR ARCHIVOS"
+    echo "3. MODIFICAR PERMISOS A UN ARCHIVO"
+    echo "4. VISUALIZAR EL CONTENIDO DE UN ARCHIVO"
+    echo "5. BORRAR UN ARCHIVO"
+    echo "6. CAMBIAR EL NOMBRE DE UN ARCHIVO"
+    echo "7. BORRAR UN DIRECTORIO"
+    echo "8. REGRESAR"
+    echo "Seleccione la opción deseada:"
+    read opcion
+    case $opcion in
+      1) crear_directorio;;
+      2) copiar_archivo;;
+      3) modificar_permisos_archivo;;
+      4) visualizar_archivo;;
+      5) borrar_archivo;;
+      6) renombrar_archivo;;
+      7) borrar_directorio;;
+      8) menu_principal;;
+      *) mensaje_error 8;;
+    esac
+  done
+}
