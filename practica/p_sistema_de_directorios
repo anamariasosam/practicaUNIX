@@ -1,6 +1,6 @@
 function crear_directorio {
   clear
-  echo "Ingrese el nombre del directorio a crear. Luego Presione Enter"
+  echo "${YELLOW}Ingrese el nombre del directorio a crear. Luego Presione Enter ${CYAN}"
   read nombre_directorio
 
   if test -d $nombre_directorio
@@ -10,9 +10,8 @@ function crear_directorio {
     sleep 2
     crear_directorio
   else
-    echo "Creando directorio: $nombre_directorio"
     mkdir $nombre_directorio
-    echo "Directorio creado con exito"
+    echo "${BG_START}Directorio: $nombre_directorio creado con exito${BG_END}"
     ls
   fi
   sleep 4
@@ -22,7 +21,7 @@ function crear_directorio {
 function borrar_todo {
   clear
   rm -fr $1
-  echo "Directorio $1 borrado con exito"
+  echo "${BG_START} Directorio $1 borrado con exito ${BG_END}"
   ls
   clear
   break
@@ -31,11 +30,11 @@ function borrar_todo {
 function verifcar_eliminacion_de_directorio {
   while true
   do
-    echo "IMPORTANTE"
+    echo "${RED}IMPORTANTE"
     echo "Borrando el directorio $nombre_directorio, se borraran ademas los archivos dentro de esta carpeta ..."
-    echo "¿Esta seguro?. Presione:"
+    echo "¿Esta seguro?. Presione: ${CYAN}"
     echo "1) SI ESTOY SEGURO"
-    echo "2) CANCELAR OPERACION"
+    echo "2) CANCELAR OPERACION ${YELLOW}"
     read opcion
     case $opcion in
       1) borrar_todo $nombre_directorio;;
@@ -47,14 +46,14 @@ function verifcar_eliminacion_de_directorio {
 
 function borrar_directorio {
   clear
-  echo "Ingrese el nombre del directorio a borrar. Luego Presione Enter"
+  echo "${YELLOW}Ingrese el nombre del directorio a borrar. Luego Presione Enter ${CYAN}"
   read nombre_directorio
   clear
-  if test -d $nombre_directorio
+  if test -d $nombre_directorio -a -w $nombre_directorio
   then
     verifcar_eliminacion_de_directorio $nombre_directorio
   else
-    echo "$nombre_directorio no existe"
+    echo "${RED}$nombre_directorio no existe o no se puede eliminar"
     sleep 2
     borrar_directorio
   fi

@@ -1,11 +1,11 @@
-source sistema_de_archivos
-source sistema_de_directorios
+source p_sistema_de_archivos
+source p_sistema_de_directorios
 
 function menu_sistema_de_archivos {
   clear
   while true
   do
-    echo "Menú Sistema de archivos"
+    echo "${RED}  Menú Sistema de archivos ${LIGHTGRAY}"
     echo "1. CREAR DIRECTORIO"
     echo "2. COPIAR ARCHIVOS"
     echo "3. MODIFICAR PERMISOS A UN ARCHIVO"
@@ -14,7 +14,7 @@ function menu_sistema_de_archivos {
     echo "6. CAMBIAR EL NOMBRE DE UN ARCHIVO"
     echo "7. BORRAR UN DIRECTORIO"
     echo "8. REGRESAR"
-    echo "Seleccione la opción deseada:"
+    echo "${YELLOW}Seleccione la opción deseada: ${CYAN}"
     read opcion
     case $opcion in
       1) crear_directorio;;

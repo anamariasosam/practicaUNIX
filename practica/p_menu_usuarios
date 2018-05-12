@@ -1,16 +1,16 @@
-source usuarios
+source p_usuarios
 
 function menu_usuarios {
   clear
   while true
   do
-    echo "Menu Varios Usuarios"
+    echo "${RED} Menu Varios Usuarios ${LIGHTGRAY}"
     echo "1. MOSTRAR NOMBRE DE USUARIOS CONECTADOS"
     echo "2. MOSTRAR NUMERO DE USUARIOS CONECTADOS"
     echo "3. AVERIGUAR SI UN USUARIO ESTA CONECTADO"
     echo "4. ENVIAR MENSAJE A UN USUARIO"
     echo "5. REGRESAR"
-    echo "Seleccione la opción deseada:"
+    echo "${YELLOW} Seleccione la opción deseada: ${CYAN}"
     read opcion
     case $opcion in
       1) usuarios_conectados;;

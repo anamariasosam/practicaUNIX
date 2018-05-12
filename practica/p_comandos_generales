@@ -1,5 +1,7 @@
 function ejecutar_comando {
   clear
+  echo "${BG_START} $2 ${BG_END}"
+  sleep 1
   $1
   sleep 2
   clear

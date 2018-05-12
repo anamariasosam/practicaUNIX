@@ -1,0 +1,28 @@
+source p_comandos_generales
+
+function menu_comandos_generales {
+  clear
+  while true
+  do
+    echo "${RED} Menú Comandos Generales ${LIGHTGRAY}"
+    echo "1. VISUALIZAR HORA DEL SISTEMA"
+    echo "2. PATH O RUTA ACTUAL"
+    echo "3. CAMBIO DE PASSWORD"
+    echo "4. MOSTRAR DISCO LIBRE"
+    echo "5. MOSTRAR DISCO UTILIZADO"
+    echo "6. VISUALIZAR PROCESOS ACTIVOS"
+    echo "7. REGRESAR"
+    echo "${YELLOW}Seleccione la opción deseada: ${CYAN}"
+    read opcion
+    case $opcion in
+      1) ejecutar_comando date 'La hora actual es:';;
+      2) ejecutar_comando pwd 'La ruta actual es:';;
+      3) ejecutar_comando passwd 'Cambiar la contraseña';;
+      4) ejecutar_comando df 'El disco libre';;
+      5) ejecutar_comando du 'El disco utilizado';;
+      6) ejecutar_comando ps 'Los procesos activos';;
+      7) menu_principal;;
+      *) mensaje_error 7;;
+    esac
+  done
+}

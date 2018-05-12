@@ -1,6 +1,6 @@
 function nombre_usuarios_conectados {
   clear
-  echo "Los usuarios conectados son:"
+  echo "${BG_START}Los usuarios conectados son:${BG_END}"
   who > usuarios_conectados
   cut -c 1-9  usuarios_conectados
   rm usuarios_conectados
@@ -14,7 +14,7 @@ function usuarios_conectados {
 
 function numero_de_usuarios_conectados {
   clear
-  echo "Mostrando número de usuarios conectados:"
+  echo "${BG_START}El número de usuarios conectados: ${BG_END}"
   who | wc -l > usuarios_conectados
   tr -d " \t" < usuarios_conectados > numero_usuarios_conectados
   cat numero_usuarios_conectados
@@ -26,10 +26,10 @@ function numero_de_usuarios_conectados {
 
 function enviar_mensaje_a_usuario {
   nombre_usuarios_conectados
-  echo "¿A qué usuario desea enviarle el mensaje?"
+  echo "${YELLOW}¿A qué usuario desea enviarle el mensaje?${CYAN}"
   read usuario
 
-  echo "¿Que mensaje desea enviarle a $usuario ?"
+  echo "${YELLOW}¿Que mensaje desea enviarle a $usuario?${CYAN}"
   read mensaje
 
   echo "Enviando: '$mensaje' al usuario: $usuario"
@@ -40,23 +40,22 @@ function enviar_mensaje_a_usuario {
 }
 
 function usuario_conectado {
-  echo "Veriricando si $usuario esta conectado..."
+  echo "${BG_START}Verificando si $usuario esta conectado... ${BG_END}"
   who | grep -w "$1" > filtro_usuario
 
   if test -s filtro_usuario
   then
-    echo "$usuario si esta conectado"
+    echo "${CYAN} $usuario si esta conectado"
   else
-    echo "$usuario no esta conectado"
+    echo "${CYAN} $usuario no esta conectado"
   fi
 
-  rm usuarios_conectados
   rm filtro_usuario
 }
 
 function verificar_usuario_conectado {
   clear
-  echo "¿Qué usuario desea verificar si esta conectado?"
+  echo "${YELLOW}¿Qué usuario desea verificar si esta conectado?${CYAN}"
   read usuario
   clear
 

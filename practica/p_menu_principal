@@ -8,9 +8,10 @@ function mensaje_error {
 function mensaje_despedida {
   clear
   nombre="$(whoami)"
-  echo "Gracias por su visita $nombre !!!"
+  echo "Gracias  \033[05;44;33m$nombre\033[0m por su visita"
   sleep 2
   exit
+  chmod a+w p_*
   clear
 }
 
@@ -18,12 +19,12 @@ function menu_principal {
   clear
   while true
   do
-    echo " MENU PRINCIPAL "
+    echo "${RED} MENU PRINCIPAL ${LIGHTGRAY}"
     echo "1. COMANDOS GENERALES"
     echo "2. USUARIOS"
     echo "3. SISTEMA DE ARCHIVOS"
     echo "4. TERMINAR"
-    echo "Seleccione la opción deseada. Luego Presione Enter"
+    echo "${YELLOW}Seleccione la opción deseada. Luego Presione Enter"
     read opcion
     case $opcion in
       1) menu_comandos_generales;;

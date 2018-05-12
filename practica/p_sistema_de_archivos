@@ -1,0 +1,112 @@
+function copiar_archivo {
+  clear
+  echo "Ingrese el nombre del archivo a copiar. Luego Presione Enter"
+  read nombre_archivo_1
+
+  if test -f $nombre_archivo_1
+  then
+    clear
+    echo "${YELLOW}¿Que nombre le desea poner al archivo copiado de $nombre_archivo_1? ${CYAN}"
+    echo "${RED}NOTA: Si el nombre del archivo es una carpeta ya existente el archivo $nombre_archivo_1 se creara dentro de la carpeta ${CYAN}"
+    read nombre_archivo_2
+    echo "${BG_START}Copiando el archivo $nombre_archivo_1 en $nombre_archivo_2${BG_END}"
+    cp $nombre_archivo_1 $nombre_archivo_2
+    echo "Archivo copiado con exito"
+    ls
+  else
+    clear
+    echo "${RED}$nombre_archivo_1 no existe${CYAN}"
+    sleep 2
+    copiar_archivo
+  fi
+  sleep 4
+  clear
+}
+
+function renombrar_archivo {
+  clear
+  echo "${YELLOW}Ingrese el nombre del archivo que desear renombrar. Luego Presione Enter ${CYAN}"
+  read nombre_archivo_1
+
+  if test -f $nombre_archivo_1
+  then
+    clear
+    echo "${YELLOW}¿Que nombre le desea poner al archivo? Luego Presione Enter ${CYAN}"
+    read nombre_archivo_2
+    echo "${BG_START}Renombrando el archivo $nombre_archivo_1 a $nombre_archivo_2${BG_END}"
+    mv $nombre_archivo_1 $nombre_archivo_2
+    echo "Archivo renombrado con exito"
+    ls
+  else
+    clear
+    echo "$nombre_archivo_1 no existe"
+    sleep 2
+    renombrar_archivo
+  fi
+  sleep 4
+  clear
+}
+
+function visualizar_archivo {
+  clear
+  echo "${YELLOW}Ingrese el nombre del archivo a visualizar. Luego Presione Enter ${CYAN}"
+  read nombre_archivo
+
+  if test -f $nombre_archivo
+  then
+    clear
+    echo "${RED} PRESIONE LA LETRA q para dejar de visualizar el archivo ${CYAN}"
+    sleep 2
+    clear
+    more $nombre_archivo
+  else
+    clear
+    echo "$nombre_archivo no existe"
+    sleep 2
+    visualizar_archivo
+  fi
+  clear
+}
+
+function borrar_archivo {
+  clear
+  echo "${YELLOW} Ingrese el nombre del archivo a borrar. Luego Presione Enter ${CYAN}"
+  read nombre_archivo
+
+  if test -f $nombre_archivo -a -w $nombre_archivo
+  then
+    clear
+    echo "${BG_START}Borrando archivo $nombre_archivo ...${BG_END}"
+    rm $nombre_archivo
+    echo "${GREEN}Archivo borrado con exito${CYAN}"
+    ls
+  else
+    clear
+    echo "${RED}$nombre_archivo no existe o no se puede eliminar${CYAN}"
+    sleep 2
+    borrar_archivo
+  fi
+  sleep 4
+  clear
+}
+
+function modificar_permisos_archivo {
+  clear
+  echo "${YELLOW}Ingrese el nombre del archivo que desea modificar los permisos. Luego Presione Enter ${CYAN}"
+  read nombre_archivo
+
+  if test -f $nombre_archivo
+  then
+    clear
+    echo "${YELLOW}¿Que permisos $nombre_archivo?. Luego Presione Enter${CYAN}"
+    read permisos
+    echo $permisos
+  else
+    clear
+    echo "${RED}$nombre_archivo no existe${CYAN}"
+    sleep 2
+    modificar_permisos_archivo
+  fi
+  sleep 4
+  clear
+}
