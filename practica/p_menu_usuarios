@@ -4,7 +4,7 @@ function menu_usuarios {
   clear
   while true
   do
-    echo "${RED} Menu Varios Usuarios ${LIGHTGRAY}"
+    echo "${RED}Menu Varios Usuarios ${LIGHTGRAY}"
     echo "1. MOSTRAR NOMBRE DE USUARIOS CONECTADOS"
     echo "2. MOSTRAR NUMERO DE USUARIOS CONECTADOS"
     echo "3. AVERIGUAR SI UN USUARIO ESTA CONECTADO"

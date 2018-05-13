@@ -5,7 +5,7 @@ function menu_sistema_de_archivos {
   clear
   while true
   do
-    echo "${RED}  Menú Sistema de archivos ${LIGHTGRAY}"
+    echo "${RED}Menú Sistema de archivos ${LIGHTGRAY}"
     echo "1. CREAR DIRECTORIO"
     echo "2. COPIAR ARCHIVOS"
     echo "3. MODIFICAR PERMISOS A UN ARCHIVO"

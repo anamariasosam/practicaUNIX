@@ -6,7 +6,7 @@ function mensaje_error {
 }
 
 function cancelar_operacion {
-  if [ $1 == "salir" ]; then
+  if [ $1 == "q" ]; then
     echo "Operacion Cancelada...."
     sleep 2
     clear
@@ -17,7 +17,7 @@ function cancelar_operacion {
 function mensaje_despedida {
   clear
   nombre="$(whoami)"
-  echo "Gracias  \033[05;44;33m$nombre\033[0m por su visita"
+  echo "${WHITE}Gracias \033[05;44;33m$nombre\033[0m por su visita"
   sleep 2
   exit
   chmod a+w p_*
@@ -28,7 +28,7 @@ function menu_principal {
   clear
   while true
   do
-    echo "${RED} MENU PRINCIPAL ${LIGHTGRAY}"
+    echo "${RED}MENU PRINCIPAL ${LIGHTGRAY}"
     echo "1. COMANDOS GENERALES"
     echo "2. USUARIOS"
     echo "3. SISTEMA DE ARCHIVOS"

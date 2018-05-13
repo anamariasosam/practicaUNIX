@@ -46,6 +46,7 @@ function verifcar_eliminacion_de_directorio {
 
 function borrar_directorio {
   clear
+  ls
   echo "${YELLOW}Ingrese el nombre del directorio a borrar. Luego Presione Enter ${CYAN}"
   read nombre_directorio
   clear

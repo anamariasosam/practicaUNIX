@@ -4,7 +4,7 @@ function menu_comandos_generales {
   clear
   while true
   do
-    echo "${RED} Menú Comandos Generales ${LIGHTGRAY}"
+    echo "${RED}Menú Comandos Generales ${LIGHTGRAY}"
     echo "1. VISUALIZAR HORA DEL SISTEMA"
     echo "2. PATH O RUTA ACTUAL"
     echo "3. CAMBIO DE PASSWORD"
