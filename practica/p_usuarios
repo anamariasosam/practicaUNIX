@@ -26,10 +26,10 @@ function numero_de_usuarios_conectados {
 
 function enviar_mensaje_a_usuario {
   nombre_usuarios_conectados
-  echo "${YELLOW}¿A qué usuario desea enviarle el mensaje?${CYAN}"
+  echo "${YELLOW}¿A qué usuario desea enviarle el mensaje? Luego Presione Enter${CYAN}"
   read usuario
 
-  echo "${YELLOW}¿Que mensaje desea enviarle a $usuario?${CYAN}"
+  echo "${YELLOW}¿Que mensaje desea enviarle a $usuario? Luego Presione Enter${CYAN}"
   read mensaje
 
   echo "Enviando: '$mensaje' al usuario: $usuario"
@@ -55,7 +55,7 @@ function usuario_conectado {
 
 function verificar_usuario_conectado {
   clear
-  echo "${YELLOW}¿Qué usuario desea verificar si esta conectado?${CYAN}"
+  echo "${YELLOW}¿Qué usuario desea verificar si esta conectado? Luego Presione Enter${CYAN}"
   read usuario
   clear
 

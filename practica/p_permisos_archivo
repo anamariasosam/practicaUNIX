@@ -9,6 +9,10 @@ function seleccion_de_permisos {
   permisos $1 usuario 1
   permisos $1 grupo 2
   permisos $1 otros 3
+
+  echo "${BG_START} Permisos del archivo modificados con exito ${BG_END}"
+  sleep 2
+  clear
 }
 
 function permisos {

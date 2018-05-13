@@ -10,7 +10,7 @@ function menu_usuarios {
     echo "3. AVERIGUAR SI UN USUARIO ESTA CONECTADO"
     echo "4. ENVIAR MENSAJE A UN USUARIO"
     echo "5. REGRESAR"
-    echo "${YELLOW} Seleccione la opción deseada: ${CYAN}"
+    echo "${YELLOW} Seleccione la opción deseada. Luego Presione Enter${CYAN}"
     read opcion
     case $opcion in
       1) usuarios_conectados;;

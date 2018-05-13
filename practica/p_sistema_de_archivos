@@ -9,7 +9,7 @@ function copiar_archivo {
   if test -f $nombre_archivo_1
   then
     clear
-    echo "${YELLOW}¿Que nombre le desea poner al archivo copiado de $nombre_archivo_1? ${CYAN}"
+    echo "${YELLOW}¿Que nombre le desea poner al archivo copiado de $nombre_archivo_1? Luego Presione Enter${CYAN}"
     echo "${RED}NOTA: Si el nombre del archivo es una carpeta ya existente el archivo $nombre_archivo_1 se creara dentro de la carpeta ${CYAN}"
     read nombre_archivo_2
     cp $nombre_archivo_1 $nombre_archivo_2
@@ -58,7 +58,7 @@ function visualizar_archivo {
   if test -f $nombre_archivo
   then
     clear
-    echo "${RED} PRESIONE LA LETRA q para dejar de visualizar el archivo ${WHITE}"
+    echo "${RED} Presione la letra 'q' para dejar de visualizar el archivo ${WHITE}"
     sleep 2
     clear
     more $nombre_archivo
@@ -110,6 +110,6 @@ function modificar_permisos_archivo {
     sleep 2
     modificar_permisos_archivo
   fi
-  sleep 4
+  sleep 2
   clear
 }
