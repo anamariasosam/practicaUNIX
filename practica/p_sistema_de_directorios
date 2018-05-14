@@ -10,6 +10,7 @@ function crear_directorio {
     sleep 2
     crear_directorio
   else
+    clear
     mkdir $nombre_directorio
     echo "${BG_START}Directorio: $nombre_directorio creado con exito${BG_END}"
     ls
@@ -54,6 +55,7 @@ function borrar_directorio {
   then
     verifcar_eliminacion_de_directorio $nombre_directorio
   else
+    clear
     echo "${RED}$nombre_directorio no existe o no se puede eliminar"
     sleep 2
     borrar_directorio
